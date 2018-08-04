@@ -1,3 +1,9 @@
-import {capitalize} from 'lodash';
+interface String {
+    sayHello();
+}
 
-console.log("Hello " + capitalize("typescript") + "!");
+String.prototype.sayHello = function () {
+    console.log(`Hello, ${this}`!)
+};
+
+"typescript".sayHello();
